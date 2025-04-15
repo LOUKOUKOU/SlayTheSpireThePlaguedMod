@@ -1,0 +1,16 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+  "${modID}:ArtificialWing": {
+    "NAME": "Artificial Wing",
+    "FLAVOR": "A artificial wing made out of dried plants and leafs. No tool can stop a cripple from being a cripple.",
+    "DESCRIPTIONS": [
+      "The first 0 cost attack played each turn draws a card."
+    ]
+  }
+}

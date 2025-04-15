@@ -1,0 +1,120 @@
+{
+  "${modID}:ExampleCard": {
+    "NAME": "Name",
+    "DESCRIPTION": "Description. NL Second line.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:Strike_Ash": {
+    "NAME": "Strike",
+    "DESCRIPTION":  "Deal !D! damage."
+  },
+  "${modID}:Sweep": {
+    "NAME": "Sweep",
+    "DESCRIPTION":  "Deal !D! damage."
+  },
+  "${modID}:FlyingKick": {
+    "NAME": "FlyingKick",
+    "DESCRIPTION":  "Deal !D! damage, gain !M! energy. Suffer !${modID}:debuffAmount! frail next turn."
+  },
+  "${modID}:FalconPunch": {
+    "NAME": "FalconPunch",
+    "DESCRIPTION":  "Deal !D! damage !M! times."
+  },
+  "${modID}:Mobbing": {
+    "NAME": "Mobbing",
+    "DESCRIPTION":  "Deal !D! damage for each attack in your draw pile."
+  },
+  "${modID}:Pierce": {
+    "NAME": "Pierce",
+    "DESCRIPTION":  "Deal !D! damage. Draw !M! cards."
+  },
+  "${modID}:Scratch": {
+    "NAME": "Scratch",
+    "DESCRIPTION":  "Deal !D! damage. Apply !M! ${modID}:Disease."
+  },
+  "${modID}:DeathPlunge": {
+    "NAME": "Death Plunge",
+    "DESCRIPTION":  "Deal !D! damage. Take !M! damage next turn."
+  },
+  "${modID}:WingSlice": {
+    "NAME": "Wing Slice",
+    "DESCRIPTION":  "Deal !D! damage. Gain energy for each enemy hit."
+  },
+  "${modID}:Stalk": {
+    "NAME": "Stalk",
+    "DESCRIPTION":  "Deal !D! damage. Draw !M! zero cost attacks."
+  },
+  "${modID}:TalonStrike": {
+    "NAME": "Talon Strike",
+    "DESCRIPTION":  "Deal !D! damage, draw a card."
+  },
+  "${modID}:Strafe": {
+    "NAME": "Strafe",
+    "DESCRIPTION":  "Deal !${modID}:realDamage! damage. Deal !D! damage to a random enemy."
+  },
+  "${modID}:Evade": {
+    "NAME": "Evade",
+    "DESCRIPTION":  "Gain !B! Block."
+  },
+  "${modID}:Cartwheel": {
+    "NAME": "Cartwheel",
+    "DESCRIPTION":  "Gain !B! Block."
+  },
+  "${modID}:Adjust": {
+    "NAME": "Adjust",
+    "DESCRIPTION":  "Gain !B! Block."
+  },
+  "${modID}:EagleEyed": {
+    "NAME": "Eagle Eyed",
+    "DESCRIPTION":  "Gain !B! Block. Add a ${modID}:Duplicate into your draw pile.",
+    "UPGRADE_DESCRIPTION":  "Gain !B! Block. Add 2 ${modID}:Duplicates into your draw pile."
+  },
+  "${modID}:DuckAndWeave": {
+    "NAME": "Duck And Weave",
+    "DESCRIPTION":  "Gain !B! Block. Reduce the cost of a card in your hand to 0."
+  },
+  "${modID}:Mutate": {
+    "NAME": "Mutate",
+    "DESCRIPTION":  "Gain !B! Block."
+  },
+  "${modID}:Quarantine": {
+    "NAME": "Quarantine",
+    "DESCRIPTION":  "Apply !M! random disease to everyone."
+  },
+  "${modID}:Redline": {
+    "NAME": "Redline",
+    "DESCRIPTION":  "Gain !B! Block."
+  },
+  "${modID}:Swoop": {
+    "NAME": "Swoop",
+    "DESCRIPTION":  "Gain !B! Block."
+  },
+  "${modID}:Defend_Ash": {
+    "NAME": "Defend",
+    "DESCRIPTION":  "Gain !B! Block."
+  },
+  "${modID}:WingAndBlade": {
+    "NAME": "Wing And Blade",
+    "DESCRIPTION":  "Gain !B! Block. Draw !M! zero cost attacks."
+  },
+  "${modID}:FeatherForm": {
+    "NAME": "Feather Form",
+    "DESCRIPTION":  "At the start of each turn, reduce the cost of a random card to 0 until played.",
+    "UPGRADE_DESCRIPTION":  "At the start of each turn, reduce the cost of a random card to 0 for this combat."
+  },
+  "${modID}:Symbiotic": {
+    "NAME": "Symbiotic",
+    "DESCRIPTION":  "At the start of your turn, gain !M! block for each debuff.",
+    "UPGRADE_DESCRIPTION":  "At the start of your turn, gain !M! block for each debuff (innate)."
+  },
+  "${modID}:Aerodynamic": {
+    "NAME": "Aerodynamic",
+    "DESCRIPTION":  "First attack played on a turn, plays a copy of that attack in your discard pile.",
+    "DESCRIPTION_PLURAL":  "First attack played on a turn, plays !M! copies of that attack in your discard pile."
+  }
+}
