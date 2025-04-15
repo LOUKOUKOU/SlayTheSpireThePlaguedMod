@@ -23,7 +23,7 @@ public class Symbiotic extends BaseCard {
 
     public Symbiotic() {
         super(ID, info);
-        this.setMagic(6);
+        this.setMagic(5);
     }
 
     @Override

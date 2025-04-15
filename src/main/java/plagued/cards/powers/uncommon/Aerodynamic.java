@@ -33,5 +33,4 @@ public class Aerodynamic extends BaseCard {
                 )
         );
     }
-
 }

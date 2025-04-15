@@ -114,7 +114,7 @@
   },
   "${modID}:Aerodynamic": {
     "NAME": "Aerodynamic",
-    "DESCRIPTION":  "First attack played on a turn, plays a copy of that attack in your discard pile.",
-    "DESCRIPTION_PLURAL":  "First attack played on a turn, plays !M! copies of that attack in your discard pile."
+    "DESCRIPTION":  "First attack played on a turn, plays a copy of that attack in your draw pile.",
+    "UPGRADE_DESCRIPTION":  "First attack played on a turn, plays !M! copies of that attack in your draw pile."
   }
 }

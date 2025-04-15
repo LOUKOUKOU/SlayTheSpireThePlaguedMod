@@ -45,33 +45,43 @@ public class AerodynamicPower extends BasePower {
     }
 
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if(!this.isDoneThisTurn && card.type == AbstractCard.CardType.ATTACK) {
-            CardGroup tempAttacks = AbstractDungeon.player.drawPile.getAttacks();
-
-            for (int i = 0; i < tempAttacks.size() && attackPlayedAmount != 0; i++) {
-                AbstractCard tempCard = tempAttacks.group.get(i);
-                if (tempCard.cardID.equals(card.cardID)) {
-                    this.addToBot(
-                        new AbstractGameAction() {
-                            public void update() {
-                                AbstractDungeon.player.drawPile.removeCard(tempCard);
-                                AbstractDungeon.player.drawPile.addToTop(tempCard);
-                                isDone = true;
-                            }
-                        }
-                    );
-                    this.addToBot(
-                            new AbstractGameAction() {
-                                public void update() {
-                                    this.addToBot(new PlayTopCardAction(m, false));
-                                    isDone = true;
-                                }
-                            }
-                    );
-                    attackPlayedAmount--;
+        if (!this.isDoneThisTurn) {
+            boolean hasCopiesInDrawPile = false;
+            for (int i = 0; i < AbstractDungeon.player.drawPile.getAttacks().size(); i++) {
+                if (AbstractDungeon.player.drawPile.getAttacks().group.get(i).cardID.equals(card.cardID)) {
+                    hasCopiesInDrawPile = true;
+                    i = AbstractDungeon.player.drawPile.getAttacks().size();
                 }
             }
-            this.isDoneThisTurn = true;
+
+            if (card.type == AbstractCard.CardType.ATTACK && hasCopiesInDrawPile) {
+                CardGroup tempAttacks = AbstractDungeon.player.drawPile.getAttacks();
+
+                for (int i = 0; i < tempAttacks.size() && attackPlayedAmount != 0; i++) {
+                    AbstractCard tempCard = tempAttacks.group.get(i);
+                    if (tempCard.cardID.equals(card.cardID)) {
+                        this.addToBot(
+                                new AbstractGameAction() {
+                                    public void update() {
+                                        AbstractDungeon.player.drawPile.removeCard(tempCard);
+                                        AbstractDungeon.player.drawPile.addToTop(tempCard);
+                                        isDone = true;
+                                    }
+                                }
+                        );
+                        this.addToBot(
+                                new AbstractGameAction() {
+                                    public void update() {
+                                        this.addToBot(new PlayTopCardAction(m, false));
+                                        isDone = true;
+                                    }
+                                }
+                        );
+                        attackPlayedAmount--;
+                    }
+                }
+                this.isDoneThisTurn = true;
+            }
         }
     }
 }

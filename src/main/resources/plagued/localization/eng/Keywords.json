@@ -33,6 +33,6 @@
     "NAMES": [
       "disease"
     ],
-    "DESCRIPTION": "Diseased target receives more damage, disease increases each turn."
+    "DESCRIPTION": "Diseased targets receives more damage, disease increases each turn."
   }
 ]
