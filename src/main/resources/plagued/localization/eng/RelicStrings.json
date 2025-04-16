@@ -12,5 +12,12 @@
     "DESCRIPTIONS": [
       "The first 0 cost attack played each turn draws a card."
     ]
+  },
+  "${modID}:HemlockMoth": {
+    "NAME": "Hemlock Moth",
+    "FLAVOR": "Some Moths give off a pheromone that causes fever in animals with compromised immune systems.",
+    "DESCRIPTIONS": [
+      "Diseased enemies deal less damage."
+    ]
   }
 }

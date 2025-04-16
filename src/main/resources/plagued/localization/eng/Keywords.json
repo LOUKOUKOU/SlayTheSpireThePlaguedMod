@@ -31,7 +31,8 @@
   {
     "PROPER_NAME": "Disease",
     "NAMES": [
-      "disease"
+      "disease",
+      "diseased"
     ],
     "DESCRIPTION": "Diseased targets receives more damage, disease increases each turn."
   }

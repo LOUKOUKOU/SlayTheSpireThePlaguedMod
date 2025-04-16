@@ -4,8 +4,10 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import plagued.powers.services.ApplyPowerService;
+import plagued.relics.rare.HemlockMoth;
 
 import static plagued.ThePlagued.makeID;
 
@@ -35,10 +37,22 @@ public class DiseasePower extends BasePower {
     }
 
     public void updateDescription(int amount) {
-        float reduceBy = ((this.amount * WEAK_EFFECTIVENESS) * 100);
-        float increaseBy = ((this.amount * VULN_EFFECTIVENESS) * 100);
-
-        this.description = DESCRIPTIONS[0] + formatForDescription(reduceBy) + DESCRIPTIONS[1] + formatForDescription(increaseBy) + DESCRIPTIONS[2];
+        float increaseBy = (this.amount * VULN_EFFECTIVENESS);
+        if (AbstractDungeon.player.hasRelic(HemlockMoth.ID)) {
+            float reduceBy = (this.amount * WEAK_EFFECTIVENESS);
+            this.description = DESCRIPTIONS[0]
+                    + formatForDescription(increaseBy)
+                    + DESCRIPTIONS[1]
+                    + DESCRIPTIONS[2]
+                    + formatForDescription(reduceBy)
+                    + DESCRIPTIONS[3]
+                    + DESCRIPTIONS[4];
+        } else {
+            this.description = DESCRIPTIONS[0]
+                    + formatForDescription(increaseBy)
+                    + DESCRIPTIONS[1]
+                    + DESCRIPTIONS[4];
+        }
     }
 
     public void atEndOfRound() {
@@ -53,7 +67,7 @@ public class DiseasePower extends BasePower {
     }
 
     public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {
-        if (type == DamageInfo.DamageType.NORMAL && !this.owner.isPlayer) {
+        if (type == DamageInfo.DamageType.NORMAL && !this.owner.isPlayer && AbstractDungeon.player.hasRelic(HemlockMoth.ID)) {
             return damage * (1 - this.getWeak(this.amount));
         }
         return damage;

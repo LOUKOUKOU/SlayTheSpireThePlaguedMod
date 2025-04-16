@@ -42,9 +42,11 @@
   "${modID}:DiseasePower": {
     "NAME": "Disease",
     "DESCRIPTIONS": [
-      "#yAttacks deal #b",
-      "% less damage and receive #b",
-      "% more damage from #yAttacks. Increases each turn."
+      "Receive #b",
+      "% more damage from #yAttacks.",
+      " #yAttacks deal #b",
+      "% less damage.",
+      " Increases each turn."
     ]
   }
 }
