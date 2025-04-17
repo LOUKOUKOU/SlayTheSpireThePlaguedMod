@@ -7,9 +7,11 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import plagued.actions.ApplyCrippleAction;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
 import plagued.powers.PlungePower;
+import plagued.powers.services.ApplyPowerService;
 import plagued.util.CardStats;
 
 public class DeathPlunge extends BaseCard {
@@ -32,6 +34,6 @@ public class DeathPlunge extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        this.addToBot(new ApplyPowerAction(p, p, new PlungePower(p, magicNumber)));
+        this.addToBot(new ApplyCrippleAction(ApplyPowerService.POWER_TYPE.DEATH_PLUNGE, p, "Plunge", DAMAGE_SELF));
     }
 }

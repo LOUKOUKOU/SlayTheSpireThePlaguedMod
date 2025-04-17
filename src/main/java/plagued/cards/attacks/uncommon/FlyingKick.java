@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import plagued.actions.ApplyCrippleAction;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
 import plagued.powers.CrippledPower;
@@ -34,6 +35,6 @@ public class FlyingKick extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         p.gainEnergy(magicNumber);
-        this.addToBot(new ApplyPowerAction(p, p, new CrippledPower(p, "Grounded", ApplyPowerService.POWER_TYPE.FRAIL, 1)));
+        this.addToBot(new ApplyCrippleAction(ApplyPowerService.POWER_TYPE.FRAIL, p, "Off balance"));
     }
 }

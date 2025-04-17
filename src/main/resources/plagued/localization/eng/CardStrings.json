@@ -19,7 +19,7 @@
   },
   "${modID}:FlyingKick": {
     "NAME": "FlyingKick",
-    "DESCRIPTION":  "Deal !D! damage, gain !M! energy. Suffer !${modID}:debuffAmount! frail next turn."
+    "DESCRIPTION":  "${modID}:Cripple. NL Deal !D! damage, gain !M! energy. Suffer !${modID}:debuffAmount! frail next turn."
   },
   "${modID}:FalconPunch": {
     "NAME": "FalconPunch",
@@ -33,13 +33,25 @@
     "NAME": "Pierce",
     "DESCRIPTION":  "Deal !D! damage. Draw !M! cards."
   },
+  "${modID}:MercyKilling": {
+    "NAME": "Mercy Killing",
+    "DESCRIPTION":  "Deal !D! damage, draw a card for each target debuff."
+  },
+  "${modID}:Peck": {
+    "NAME": "Peck",
+    "DESCRIPTION":  "Deal !D! damage, gain !B! block."
+  },
+  "${modID}:BirdStrike": {
+    "NAME": "Bird Strike",
+    "DESCRIPTION":  "${modID}:Crippled NL Deal !D! damage to all enemies. NL Loose !M! Dexterity next turn."
+  },
   "${modID}:Scratch": {
     "NAME": "Scratch",
     "DESCRIPTION":  "Deal !D! damage. Apply !M! ${modID}:Disease."
   },
   "${modID}:DeathPlunge": {
     "NAME": "Death Plunge",
-    "DESCRIPTION":  "Deal !D! damage. Take !M! damage next turn."
+    "DESCRIPTION":  "${modID}:Crippled NL Deal !D! damage. Take !M! damage next turn."
   },
   "${modID}:WingSlice": {
     "NAME": "Wing Slice",

@@ -35,5 +35,13 @@
       "diseased"
     ],
     "DESCRIPTION": "Diseased targets receives more damage, disease increases each turn."
+  } ,
+  {
+    "PROPER_NAME": "Cripple",
+    "NAMES": [
+      "cripple",
+      "crippled"
+    ],
+    "DESCRIPTION": "Due to broken wing, you suffer debuffs the turn after playing this card."
   }
 ]

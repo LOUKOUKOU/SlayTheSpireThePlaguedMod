@@ -12,7 +12,7 @@
       " next turn."
     ]
   },
-  "${modID}:ApplyPowerNextTurnPower": {
+  "${modID}:CrippledPower": {
     "NAME": "Crippled Wing",
     "DESCRIPTIONS": [
       "Next turn, "

@@ -9,7 +9,8 @@ public class ApplyPowerService {
         FRAIL,
         VULNERABLE,
         LOOSE_DEX,
-        LOOSE_STR
+        LOOSE_STR,
+        DEATH_PLUNGE
     }
 
     public static AbstractPower getPower(POWER_TYPE type, AbstractCreature owner, int amount, boolean isSourceMonster) {
@@ -79,6 +80,9 @@ public class ApplyPowerService {
                 break;
             case VULNERABLE:
                 description = "Suffer !amount! #bVulnerable";
+                break;
+            case DEATH_PLUNGE:
+                description = "Loose !amount! life next turn.";
                 break;
             default:
                 description = "";

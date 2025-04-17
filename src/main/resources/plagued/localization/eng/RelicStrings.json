@@ -13,6 +13,13 @@
       "The first 0 cost attack played each turn draws a card."
     ]
   },
+  "${modID}:MechanicalWing": {
+    "NAME": "Mechanical Wing",
+    "FLAVOR": "Sturdy wing crafted by the goblins of The Spire. Curiously, no one has ever seen a goblin fly.",
+    "DESCRIPTIONS": [
+      "You are immune to cripple effects."
+    ]
+  },
   "${modID}:HemlockMoth": {
     "NAME": "Hemlock Moth",
     "FLAVOR": "Some Moths give off a pheromone that causes fever in animals with compromised immune systems.",
