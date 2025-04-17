@@ -25,7 +25,7 @@ public class DeathPlunge extends BaseCard {
     );
     private static final int DAMAGE = 22;
     private static final int UPG_DAMAGE = 5;
-    private static final int DAMAGE_SELF = 15;
+    private static final int DAMAGE_SELF = 25;
     public DeathPlunge() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.

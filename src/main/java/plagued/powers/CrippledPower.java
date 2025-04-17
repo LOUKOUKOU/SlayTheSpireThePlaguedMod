@@ -1,5 +1,6 @@
 package plagued.powers;
 
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -12,14 +13,14 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static plagued.ThePlagued.makeID;
 
-public class CrippledPower extends BasePower {
+public class CrippledPower extends BasePower implements NonStackablePower {
     public static final String POWER_ID = makeID("CrippledPower");
     private static final boolean TURN_BASED = true;
     ;
     private final ApplyPowerService.POWER_TYPE powerApplied;
 
     public CrippledPower(AbstractCreature owner, String name, ApplyPowerService.POWER_TYPE powerApplied, int amount) {
-        super(POWER_ID, ApplyPowerService.getPowerType(powerApplied), TURN_BASED, owner, 1);
+        super(POWER_ID, ApplyPowerService.getPowerType(powerApplied), TURN_BASED, owner, amount);
         this.name = name;
         this.powerApplied = powerApplied;
         this.updateDescription(powerApplied, amount);
@@ -38,7 +39,7 @@ public class CrippledPower extends BasePower {
                     AbstractDungeon.player,
                     ApplyPowerService.getPower(this.powerApplied, owner, amount, false)
             ));
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
     }
 }

@@ -28,7 +28,7 @@ public class WingSlice extends BaseCard {
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAllEnemiesAction(p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         p.gainEnergy(AbstractDungeon.getCurrRoom().monsters.monsters.size());
     }
 }

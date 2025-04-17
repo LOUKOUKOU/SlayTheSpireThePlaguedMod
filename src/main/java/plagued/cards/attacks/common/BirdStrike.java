@@ -31,11 +31,12 @@ public class BirdStrike extends BaseCard {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(DEX_LOSS);
+        this.isMultiDamage = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAllEnemiesAction(p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         this.addToBot(new ApplyCrippleAction(ApplyPowerService.POWER_TYPE.LOOSE_DEX, p, "Phantom Wing", 1));
     }
 }

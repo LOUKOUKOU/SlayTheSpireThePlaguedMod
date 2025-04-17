@@ -1,6 +1,7 @@
 package plagued.powers.services;
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
 
 public class ApplyPowerService {
@@ -16,18 +17,15 @@ public class ApplyPowerService {
     public static AbstractPower getPower(POWER_TYPE type, AbstractCreature owner, int amount, boolean isSourceMonster) {
         switch (type) {
             case WEAK:
+                return new WeakPower(owner, amount, isSourceMonster);
             case FRAIL:
+                return new FrailPower(owner, amount, isSourceMonster);
             case VULNERABLE:
-                switch (type) {
-                    case WEAK:
-                        return new WeakPower(owner, amount, isSourceMonster);
-                    case FRAIL:
-                        return new FrailPower(owner, amount, isSourceMonster);
-                    case VULNERABLE:
-                        return new VulnerablePower(owner, amount, isSourceMonster);
-                    default:
-                        return null;
-                }
+                return new VulnerablePower(owner, amount, isSourceMonster);
+            case LOOSE_DEX:
+                return new DexterityPower(owner, -amount);
+            case LOOSE_STR:
+                return new StrengthPower(owner, -amount);
             default:
                 return null;
         }
@@ -36,16 +34,9 @@ public class ApplyPowerService {
     public static AbstractPower getPower(POWER_TYPE type, AbstractCreature owner, int amount) {
         switch (type) {
             case LOOSE_DEX:
+                return new LoseDexterityPower(owner, amount);
             case LOOSE_STR:
-            case VULNERABLE:
-                switch (type) {
-                    case LOOSE_DEX:
-                        return new LoseDexterityPower(owner, amount);
-                    case LOOSE_STR:
-                        return new LoseStrengthPower(owner, amount);
-                    default:
-                        return null;
-                }
+                return new LoseStrengthPower(owner, amount);
             default:
                 return null;
         }
