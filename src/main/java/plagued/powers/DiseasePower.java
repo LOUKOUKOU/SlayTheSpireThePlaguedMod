@@ -15,7 +15,7 @@ public class DiseasePower extends BasePower {
     public static final String POWER_ID = makeID("DiseasePower");
     private static final float WEAK_EFFECTIVENESS = 0.01F;
     private static final float VULN_EFFECTIVENESS = 0.02F;
-    private static final AbstractPower.PowerType TYPE = PowerType.BUFF;
+    private static final AbstractPower.PowerType TYPE = PowerType.DEBUFF;
     private static final boolean TURN_BASED = false;
 
     private float getWeak(int amount) {

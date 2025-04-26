@@ -21,9 +21,13 @@
     "NAME": "FlyingKick",
     "DESCRIPTION":  "${modID}:Cripple. NL Deal !D! damage, gain !M! energy. Suffer !${modID}:debuffAmount! frail next turn."
   },
+  "${modID}:Hamstringing": {
+    "NAME": "Hamstringing",
+    "DESCRIPTION":  "Deal !D! damage, apply !M! random debuffs."
+  },
   "${modID}:FalconPunch": {
     "NAME": "FalconPunch",
-    "DESCRIPTION":  "Deal !D! damage !M! times."
+    "DESCRIPTION":  "Deal 14 damage. Next attack deals extra damage. Also applies !M! weak and !M! vulnerable."
   },
   "${modID}:Mobbing": {
     "NAME": "Mobbing",
@@ -48,6 +52,14 @@
   "${modID}:Scratch": {
     "NAME": "Scratch",
     "DESCRIPTION":  "Deal !D! damage. Apply !M! ${modID}:Disease."
+  },
+  "${modID}:Spite": {
+    "NAME": "Spite",
+    "DESCRIPTION":  "Deal !D! damage. If you have a debuff, deal that again."
+  },
+  "${modID}:Dive": {
+    "NAME": "Dive",
+    "DESCRIPTION":  "Deal !D! damage, deals !M! extra damage for ALL your Dive cards."
   },
   "${modID}:DeathPlunge": {
     "NAME": "Death Plunge",

@@ -48,5 +48,20 @@
       "% less damage.",
       " Increases each turn."
     ]
+  },
+  "${modID}:DudPower": {
+    "NAME": "Dud",
+    "DESCRIPTIONS": [
+      ""
+    ]
+  },
+  "${modID}:RaptorBoostPower": {
+    "NAME": "Raptor Boost",
+    "DESCRIPTIONS": [
+      "Next attack deals  #b",
+      " damage. Also apply ",
+      " weak and ",
+      " vulnerable"
+    ]
   }
 }
