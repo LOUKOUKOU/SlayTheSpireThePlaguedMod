@@ -13,6 +13,8 @@ public class ApplyCrippleAction extends AbstractGameAction {
     private String name = "";
     private final AbstractPlayer p;
     private final ApplyPowerService.POWER_TYPE debuffType;
+    private boolean applyThisTurn = false;
+
     public ApplyCrippleAction(ApplyPowerService.POWER_TYPE debuffType, AbstractPlayer player, String debuffName, int amount) {
         this.amount = amount;
         this.name = debuffName;
@@ -26,10 +28,29 @@ public class ApplyCrippleAction extends AbstractGameAction {
         this.debuffType = debuffType;
     }
 
+    public ApplyCrippleAction(ApplyPowerService.POWER_TYPE debuffType, AbstractPlayer player, String debuffName, int amount, boolean thisTurn) {
+        this.amount = amount;
+        this.name = debuffName;
+        this.p = player;
+        this.debuffType = debuffType;
+        this.applyThisTurn = thisTurn;
+    }
+
+    public ApplyCrippleAction(ApplyPowerService.POWER_TYPE debuffType, AbstractPlayer player, String debuffName, boolean thisTurn) {
+        this.name = debuffName;
+        this.p = player;
+        this.debuffType = debuffType;
+        this.applyThisTurn = thisTurn;
+    }
+
     @Override
     public void update() {
-        if(!AbstractDungeon.player.hasRelic(MechanicalWing.ID)) {
-            this.addToBot(new ApplyPowerAction(p, p, new CrippledPower(p, this.name, this.debuffType, this.amount)));
+        if (!AbstractDungeon.player.hasRelic(MechanicalWing.ID)) {
+            if (this.applyThisTurn) {
+                this.addToBot(CrippledPower.getPower(this.debuffType, p, this.amount));
+            } else {
+                this.addToBot(new ApplyPowerAction(p, p, new CrippledPower(p, this.name, this.debuffType, this.amount)));
+            }
         }
         this.isDone = true;
     }

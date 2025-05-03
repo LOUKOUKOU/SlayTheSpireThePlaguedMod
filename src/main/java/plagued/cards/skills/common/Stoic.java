@@ -2,16 +2,19 @@ package plagued.cards.skills.common;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import plagued.actions.DrawPileToHandAction;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import plagued.actions.ApplyCrippleAction;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
+import plagued.powers.services.ApplyPowerService;
 import plagued.util.CardStats;
 
-public class WingAndBlade extends BaseCard {
-    public static final String ID = makeID("WingAndBlade");
-    private static final int MAGIC_NUMBER = 2;
-    private static final int UPGRADE_MAGIC_NUMBER = 2;
+public class Stoic extends BaseCard {
+    public static final String ID = makeID("Stoic");
+    private static final int MAGIC_NUMBER = 1;
+    private static final int UPGRADE_MAGIC_NUMBER = 1;
     private static final CardStats info = new CardStats(
             ThePlaguedCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
@@ -20,14 +23,14 @@ public class WingAndBlade extends BaseCard {
             1
     );
 
-    public WingAndBlade() {
+    public Stoic() {
         super(ID, info);
-        this.setBlock(6);
         this.setMagic(MAGIC_NUMBER, UPGRADE_MAGIC_NUMBER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new GainBlockAction(p, p, this.block));
-        this.addToBot(new DrawPileToHandAction(magicNumber, CardType.ATTACK, true, 0));
+            for (int i = 0; i < AbstractDungeon.player.powers.size(); i++) {
+                AbstractDungeon.player.powers.get(i).stackPower(this.magicNumber);
+            }
     }
 }

@@ -3,6 +3,7 @@ package plagued.powers.services;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
+import plagued.powers.DudPower;
 
 public class ApplyPowerService {
     public enum POWER_TYPE {
@@ -11,7 +12,8 @@ public class ApplyPowerService {
         VULNERABLE,
         LOOSE_DEX,
         LOOSE_STR,
-        DEATH_PLUNGE
+        DEATH_PLUNGE,
+        DRAW_DOWN
     }
 
     public static AbstractPower getPower(POWER_TYPE type, AbstractCreature owner, int amount, boolean isSourceMonster) {
@@ -26,8 +28,10 @@ public class ApplyPowerService {
                 return new DexterityPower(owner, -amount);
             case LOOSE_STR:
                 return new StrengthPower(owner, -amount);
+            case DRAW_DOWN:
+                return new DrawReductionPower(owner, amount);
             default:
-                return null;
+                return new DudPower(owner);
         }
 
     }
@@ -38,7 +42,7 @@ public class ApplyPowerService {
             case LOOSE_STR:
                 return new LoseStrengthPower(owner, amount);
             default:
-                return null;
+                return new DudPower(owner);
         }
     }
 
@@ -49,6 +53,7 @@ public class ApplyPowerService {
             case VULNERABLE:
             case LOOSE_DEX:
             case LOOSE_STR:
+            case DRAW_DOWN:
             default:
                 return AbstractPower.PowerType.DEBUFF;
         }

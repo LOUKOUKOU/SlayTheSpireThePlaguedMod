@@ -25,7 +25,7 @@ public class Scratch extends BaseCard {
     );
     private static final int DISEASE_NUMBER = 1;
     private static final int DAMAGE = 3;
-    private static final int UPG_DAMAGE = 5;
+    private static final int UPG_DAMAGE = 2;
 
     public Scratch() {
         super(ID, info);

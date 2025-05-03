@@ -85,22 +85,34 @@
     "NAME": "Evade",
     "DESCRIPTION":  "Gain !B! Block."
   },
-  "${modID}:Cartwheel": {
-    "NAME": "Cartwheel",
-    "DESCRIPTION":  "Gain !B! Block."
-  },
-  "${modID}:Adjust": {
-    "NAME": "Adjust",
-    "DESCRIPTION":  "Gain !B! Block."
-  },
   "${modID}:EagleEyed": {
     "NAME": "Eagle Eyed",
     "DESCRIPTION":  "Gain !B! Block. Add a ${modID}:Duplicate into your draw pile.",
     "UPGRADE_DESCRIPTION":  "Gain !B! Block. Add 2 ${modID}:Duplicates into your draw pile."
   },
-  "${modID}:DuckAndWeave": {
-    "NAME": "Duck And Weave",
+  "${modID}:Duck": {
+    "NAME": "Duck",
     "DESCRIPTION":  "Gain !B! Block. Reduce the cost of a card in your hand to 0."
+  },
+  "${modID}:Swoop": {
+    "NAME": "Swoop",
+    "DESCRIPTION":  "Gain !M! energy, next turn draw 1 less card."
+  },
+  "${modID}:Perch": {
+    "NAME": "Perch",
+    "DESCRIPTION":  "Draw !M! cards. Gain !B! block for each card that is an attack."
+  },
+  "${modID}:Skyward": {
+    "NAME": "Skyward",
+    "DESCRIPTION":  "Gain !B! block this turn. Gain 1 frail next turn."
+  },
+  "${modID}:Flap": {
+    "NAME": "Flap",
+    "DESCRIPTION":  "Apply !M! random debuff to target."
+  },
+  "${modID}:Stoic": {
+    "NAME": "Stoic",
+    "DESCRIPTION":  "Apply !M! stack of each buff and debuff."
   },
   "${modID}:Mutate": {
     "NAME": "Mutate",
@@ -112,10 +124,6 @@
   },
   "${modID}:Redline": {
     "NAME": "Redline",
-    "DESCRIPTION":  "Gain !B! Block."
-  },
-  "${modID}:Swoop": {
-    "NAME": "Swoop",
     "DESCRIPTION":  "Gain !B! Block."
   },
   "${modID}:Defend_Ash": {

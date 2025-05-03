@@ -3,13 +3,17 @@ package plagued.cards.skills.common;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import plagued.actions.ApplyCrippleAction;
 import plagued.actions.DrawPileToHandAction;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
+import plagued.powers.services.ApplyPowerService;
 import plagued.util.CardStats;
 
-public class WingAndBlade extends BaseCard {
-    public static final String ID = makeID("WingAndBlade");
+public class Skyward extends BaseCard {
+    public static final String ID = makeID("Skyward");
+    private static final int BLOCK = 10;
+    private static final int BLOCK_UPGRADE = 4;
     private static final int MAGIC_NUMBER = 2;
     private static final int UPGRADE_MAGIC_NUMBER = 2;
     private static final CardStats info = new CardStats(
@@ -20,14 +24,14 @@ public class WingAndBlade extends BaseCard {
             1
     );
 
-    public WingAndBlade() {
+    public Skyward() {
         super(ID, info);
-        this.setBlock(6);
+        this.setBlock(BLOCK, BLOCK_UPGRADE);
         this.setMagic(MAGIC_NUMBER, UPGRADE_MAGIC_NUMBER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, p, this.block));
-        this.addToBot(new DrawPileToHandAction(magicNumber, CardType.ATTACK, true, 0));
+        this.addToBot(new ApplyCrippleAction(ApplyPowerService.POWER_TYPE.VULNERABLE, p, "Crash", 1));
     }
 }

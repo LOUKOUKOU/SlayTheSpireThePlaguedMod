@@ -26,7 +26,7 @@ public class Dive extends BaseCard {
     );
     private static final int DAMAGE = 8;
     private static final int DAMAGE_PER_DIVE = 3;
-    private static final int DAMAGE_PER_DIVE_UPGRADE = 5;
+    private static final int DAMAGE_PER_DIVE_UPGRADE = 2;
 
     public Dive() {
         super(ID, info);

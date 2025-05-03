@@ -1,15 +1,15 @@
 package plagued.cards.skills.common;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import plagued.actions.DuplicateAction;
+import plagued.actions.PerchFollowUpAction;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
 import plagued.util.CardStats;
 
-public class EagleEyed extends BaseCard {
-    public static final String ID = makeID("EagleEyed");
+public class Perch extends BaseCard {
+    public static final String ID = makeID("Perch");
     private static final CardStats info = new CardStats(
             ThePlaguedCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
@@ -17,15 +17,17 @@ public class EagleEyed extends BaseCard {
             CardTarget.SELF,
             1
     );
-
-    public EagleEyed() {
+    private static final int BLOCK = 3;
+    private static final int DRAW = 2;
+    private static final int DRAW_UPGRADE = 1;
+    public Perch() {
         super(ID, info);
-        this.setBlock(4);
-        this.setMagic(1, 1);
+        this.setBlock(BLOCK);
+        setMagic(DRAW, DRAW_UPGRADE);
     }
 
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new GainBlockAction(p, p, this.block));
-        this.addToBot(new DuplicateAction(upgraded ? 2 : 1, DuplicateAction.DUPLICATE_LOCATION.DRAW_RANDOM));
+        this.addToBot(new DrawCardAction(this.magicNumber, new PerchFollowUpAction(this.block, p)));
     }
 }

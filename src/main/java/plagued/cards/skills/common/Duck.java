@@ -14,8 +14,10 @@ import plagued.util.CardStats;
  *
  * Exception in thread "LWJGL Application" com.badlogic.gdx.utils.GdxRuntimeException: java.lang.ExceptionInInitializerError
  */
-public class DuckAndWeave extends BaseCard {
-    public static final String ID = makeID("DuckAndWeave");
+public class Duck extends BaseCard {
+    public static final String ID = makeID("Duck");
+    private static final int BLOCK = 7;
+    private static final int BLOCK_UPGRADE = 3;
     private static final CardStats info = new CardStats(
             ThePlaguedCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
@@ -23,9 +25,9 @@ public class DuckAndWeave extends BaseCard {
             CardTarget.SELF,
             1
     );
-    public DuckAndWeave() {
+    public Duck() {
         super(ID, info);
-        this.setBlock(4, 3);
+        this.setBlock(BLOCK, BLOCK_UPGRADE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

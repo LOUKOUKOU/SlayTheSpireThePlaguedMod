@@ -30,16 +30,20 @@ public class CrippledPower extends BasePower implements NonStackablePower {
         this.description = DESCRIPTIONS[0] + ApplyPowerService.getDescription(powerApplied, amount);
     }
 
+    public static AbstractGameAction getPower(ApplyPowerService.POWER_TYPE powerApplied, AbstractCreature owner, int amount) {
+        if (powerApplied == ApplyPowerService.POWER_TYPE.DEATH_PLUNGE) {
+            return new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        } else {
+            return new ApplyPowerAction(AbstractDungeon.player,
+                    AbstractDungeon.player,
+                    ApplyPowerService.getPower(powerApplied, owner, amount, false)
+            );
+        }
+    }
+
     public void atStartOfTurn() {
         this.flash();
-        if (this.powerApplied == ApplyPowerService.POWER_TYPE.DEATH_PLUNGE) {
-            this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        } else if (ApplyPowerService.getPower(this.powerApplied, owner, amount, false) != null) {
-            this.addToBot(new ApplyPowerAction(AbstractDungeon.player,
-                    AbstractDungeon.player,
-                    ApplyPowerService.getPower(this.powerApplied, owner, amount, false)
-            ));
-        }
+        this.addToBot(getPower(this.powerApplied, this.owner, this.amount));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
     }
 }
