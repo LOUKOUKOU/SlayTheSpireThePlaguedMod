@@ -1,13 +1,10 @@
 package plagued.cards.skills.common;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import plagued.actions.ApplyCrippleAction;
-import plagued.actions.ApplyPowerToAll;
+import plagued.actions.ApplyGeneralPowerAction;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
-import plagued.powers.services.ApplyPowerService;
 import plagued.util.CardStats;
 
 public class Flap extends BaseCard {
@@ -28,6 +25,6 @@ public class Flap extends BaseCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerToAll(p, m, magicNumber));
+        this.addToBot(new ApplyGeneralPowerAction(p, m, magicNumber));
     }
 }

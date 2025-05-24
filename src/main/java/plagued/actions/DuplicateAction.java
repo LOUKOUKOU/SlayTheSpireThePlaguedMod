@@ -27,6 +27,7 @@ public class DuplicateAction extends AbstractGameAction {
     protected AbstractPlayer p;
     private final int copies;
     private final ArrayList<AbstractCard> cannotDuplicate = new ArrayList();
+    private int amount = 1;
 
     public enum DUPLICATE_LOCATION {
         DISCARD,
@@ -40,15 +41,25 @@ public class DuplicateAction extends AbstractGameAction {
     public DuplicateAction(int copies, DUPLICATE_LOCATION location) {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.copies = copies;
-        this.amount = copies;
         this.location = location;
         this.duration = Settings.ACTION_DUR_FAST;
         this.p = AbstractDungeon.player;
     }
 
+    public DuplicateAction(int amount, int copies, DUPLICATE_LOCATION location) {
+        this.actionType = ActionType.CARD_MANIPULATION;
+        this.copies = copies;
+        this.amount = amount;
+        this.location = location;
+        this.duration = Settings.ACTION_DUR_FAST;
+        this.p = AbstractDungeon.player;
+    }
+
+
     @Override
     public void update() {
         this.addToBot(new SelectCardsInHandAction(
+                this.amount,
                 this.copies > 1 ? TEXT_PLURAL : TEXT,
                 this::canDuplicate,
                 (cards) -> {

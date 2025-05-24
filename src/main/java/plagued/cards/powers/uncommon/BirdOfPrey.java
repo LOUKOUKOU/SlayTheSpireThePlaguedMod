@@ -5,12 +5,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
+import plagued.powers.BirdOfPreyPower;
 import plagued.powers.SymbioticPower;
 import plagued.util.CardStats;
 
-public class Symbiotic extends BaseCard {
-    public static final String ID = makeID("Symbiotic");
-    public static final int BLOCK_PER_DEBUFF = 3;
+public class BirdOfPrey extends BaseCard {
+    public static final String ID = makeID("BirdOfPrey");
+    private static final int CARDS_TO_DUPE = 1;
+    private static final int CARDS_TO_DUPE_UPGRADED = 1;
 
     private static final CardStats info = new CardStats(
             ThePlaguedCharacter.Meta.CARD_COLOR,
@@ -20,9 +22,9 @@ public class Symbiotic extends BaseCard {
             1
     );
 
-    public Symbiotic() {
+    public BirdOfPrey() {
         super(ID, info);
-        this.setMagic(BLOCK_PER_DEBUFF);
+        setMagic(CARDS_TO_DUPE, CARDS_TO_DUPE_UPGRADED);
     }
 
     @Override
@@ -31,7 +33,7 @@ public class Symbiotic extends BaseCard {
                 new ApplyPowerAction(
                         p,
                         p,
-                        new SymbioticPower(p, magicNumber)
+                        new BirdOfPreyPower(p, this.magicNumber)
                 )
         );
     }

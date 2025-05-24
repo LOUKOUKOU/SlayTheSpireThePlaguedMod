@@ -5,12 +5,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
-import plagued.powers.SymbioticPower;
+import plagued.powers.LighterThanAirPower;
+import plagued.powers.MoultingPower;
 import plagued.util.CardStats;
 
-public class Symbiotic extends BaseCard {
-    public static final String ID = makeID("Symbiotic");
-    public static final int BLOCK_PER_DEBUFF = 3;
+public class LighterThanAir extends BaseCard {
+    public static final String ID = makeID("LighterThanAir");
+    public static final int DAMAGE_AMOUNT = 10;
+    public static final int DAMAGE_AMOUNT_UPGRADED = 5;
 
     private static final CardStats info = new CardStats(
             ThePlaguedCharacter.Meta.CARD_COLOR,
@@ -20,9 +22,9 @@ public class Symbiotic extends BaseCard {
             1
     );
 
-    public Symbiotic() {
+    public LighterThanAir() {
         super(ID, info);
-        this.setMagic(BLOCK_PER_DEBUFF);
+        setMagic(DAMAGE_AMOUNT, DAMAGE_AMOUNT_UPGRADED);
     }
 
     @Override
@@ -31,7 +33,7 @@ public class Symbiotic extends BaseCard {
                 new ApplyPowerAction(
                         p,
                         p,
-                        new SymbioticPower(p, magicNumber)
+                        new LighterThanAirPower(p, magicNumber)
                 )
         );
     }

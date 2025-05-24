@@ -2,11 +2,10 @@ package plagued.cards.attacks.uncommon;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import plagued.actions.ApplyPowerToAll;
+import plagued.actions.ApplyGeneralPowerAction;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
 import plagued.util.CardStats;
@@ -31,6 +30,6 @@ public class Hamstringing extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        this.addToBot(new ApplyPowerToAll(p, m, magicNumber));
+        this.addToBot(new ApplyGeneralPowerAction(p, m, magicNumber));
     }
 }

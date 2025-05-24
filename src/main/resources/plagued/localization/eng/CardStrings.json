@@ -148,5 +148,26 @@
     "NAME": "Aerodynamic",
     "DESCRIPTION":  "First attack played on a turn, plays a copy of that attack in your draw pile.",
     "UPGRADE_DESCRIPTION":  "First attack played on a turn, plays !M! copies of that attack in your draw pile."
+  },
+  "${modID}:Acclimatize": {
+    "NAME": "Acclimatize",
+    "DESCRIPTION":  "Gaining a debuff draws a card."
+  },
+  "${modID}:BirdOfPrey": {
+    "NAME": "Bird Of Prey",
+    "DESCRIPTION":  "At start of each turn, ${modID}:Duplicate a card in your hand.",
+    "UPGRADE_DESCRIPTION":  "At start of each turn, ${modID}:Duplicate !M! cards in your hand."
+  },
+  "${modID}:Carrier": {
+    "NAME": "Carrier",
+    "DESCRIPTION":  "Whenever you are attacked, apply !M! ${modID}:Disease."
+  },
+  "${modID}:Moulting": {
+    "NAME": "Moulting",
+    "DESCRIPTION":  "Each turn add a random debuff to all enemies."
+  },
+  "${modID}:LighterThanAir": {
+    "NAME": "Lighter Than Air",
+    "DESCRIPTION":  "Deal !M! damage to all enemies if you end a turn on an empty hand."
   }
 }

@@ -11,7 +11,7 @@ import plagued.powers.DudPower;
 
 import java.util.Random;
 
-public class ApplyPowerToAll extends AbstractGameAction {
+public class ApplyGeneralPowerAction extends AbstractGameAction {
     private int amount = 1;
     private AbstractPlayer player;
     private AbstractMonster monster = null;
@@ -44,23 +44,23 @@ public class ApplyPowerToAll extends AbstractGameAction {
         MALLEABLE,
     }
 
-    public ApplyPowerToAll(AbstractPlayer player) {
+    public ApplyGeneralPowerAction(AbstractPlayer player) {
         this.amount = 1;
         this.player = player;
     }
 
-    public ApplyPowerToAll(AbstractPlayer player, AbstractMonster monster) {
+    public ApplyGeneralPowerAction(AbstractPlayer player, AbstractMonster monster) {
         this.amount = 1;
         this.monster = monster;
         this.player = player;
     }
 
-    public ApplyPowerToAll(AbstractPlayer player, int amount) {
+    public ApplyGeneralPowerAction(AbstractPlayer player, int amount) {
         this.amount = amount;
         this.player = player;
     }
 
-    public ApplyPowerToAll(AbstractPlayer player, AbstractMonster monster, int amount) {
+    public ApplyGeneralPowerAction(AbstractPlayer player, AbstractMonster monster, int amount) {
         this.amount = amount;
         this.monster = monster;
         this.player = player;

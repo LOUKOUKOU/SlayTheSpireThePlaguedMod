@@ -63,5 +63,42 @@
       " weak and ",
       " vulnerable"
     ]
+  },
+  "${modID}:AcclimatizePower": {
+    "NAME": "Acclimatize",
+    "DESCRIPTIONS": [
+      "Draw  #b",
+      " cards when you gain a debuff."
+    ]
+  },
+  "${modID}:BirdOfPreyPower": {
+    "NAME": "BirdOfPrey",
+    "DESCRIPTIONS": [
+      "At start of each turn, duplicate a card in your hand.",
+      "At start of each turn, duplicate #b",
+      " cards in your hand."
+    ]
+  },
+  "${modID}:CarrierPower": {
+    "NAME": "Carrier",
+    "DESCRIPTIONS": [
+      "Whenever you are attacked, apply #b",
+      " ${modID}:Disease."
+    ]
+  },
+  "${modID}:MoultingPower": {
+    "NAME": "Moulting",
+    "DESCRIPTIONS": [
+      "Each turn apply a random debuff to all enemies.",
+      "Each turn apply #b",
+      " random debuffs to all enemies."
+    ]
+  },
+  "${modID}:LighterThanAirPower": {
+    "NAME": "LighterThanAir",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      " damage to all enemies if you end a turn on an empty hand."
+    ]
   }
 }
