@@ -29,8 +29,8 @@ public class Stoic extends BaseCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-            for (int i = 0; i < AbstractDungeon.player.powers.size(); i++) {
-                AbstractDungeon.player.powers.get(i).stackPower(this.magicNumber);
-            }
+        for (int i = 0; i < AbstractDungeon.player.powers.size(); i++) {
+            p.powers.get(i).stackPower(this.magicNumber);
+        }
     }
 }

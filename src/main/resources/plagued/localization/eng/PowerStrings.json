@@ -100,5 +100,19 @@
       "Deal #b",
       " damage to all enemies if you end a turn on an empty hand."
     ]
+  },
+  "${modID}:HomeostasisPower": {
+    "NAME": "Homeostasis",
+    "DESCRIPTIONS": [
+      "At the start of each turn, increase all powers by #b",
+      " stack."
+    ]
+  },
+  "${modID}:TakeWingPower": {
+    "NAME": "Take Wing",
+    "DESCRIPTIONS": [
+      "Receives 50% less attack damage. Cancelled if dealt attack damage #b",
+      " times in one turn."
+    ]
   }
 }

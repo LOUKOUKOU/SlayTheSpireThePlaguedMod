@@ -169,5 +169,13 @@
   "${modID}:LighterThanAir": {
     "NAME": "Lighter Than Air",
     "DESCRIPTION":  "Deal !M! damage to all enemies if you end a turn on an empty hand."
+  },
+  "${modID}:Homeostasis": {
+    "NAME": "Homeostasis",
+    "DESCRIPTION":  "At the start of each turn, increase all powers by 1 stack."
+  },
+  "${modID}:TakeWing": {
+    "NAME": "Take Wing",
+    "DESCRIPTION":  "Gain !M! stacks of flying"
   }
 }
