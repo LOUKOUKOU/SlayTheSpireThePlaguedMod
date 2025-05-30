@@ -27,14 +27,12 @@ public class BattleOils extends BaseRelic {
         return String.format(DESCRIPTIONS[0] + BLOCK_BY + DESCRIPTIONS[1]);
     }
 
-    public void atEndOfTurn(boolean isPlayer) {
-        super.atTurnStart();
-        if(isPlayer) {
-            for (int i = 0; i < AbstractDungeon.player.powers.size(); i++) {
-                AbstractPower tempPower = AbstractDungeon.player.powers.get(i);
-                if(tempPower.type == AbstractPower.PowerType.DEBUFF) {
-                    this.addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, BLOCK_BY, true));
-                }
+    @Override
+    public void onPlayerEndTurn() {
+        for (int i = 0; i < AbstractDungeon.player.powers.size(); i++) {
+            AbstractPower tempPower = AbstractDungeon.player.powers.get(i);
+            if(tempPower.type == AbstractPower.PowerType.DEBUFF) {
+                this.addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, BLOCK_BY, true));
             }
         }
     }

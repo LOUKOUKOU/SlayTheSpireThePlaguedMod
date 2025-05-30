@@ -31,8 +31,8 @@
     "NAME": "Battle Oils",
     "FLAVOR": "Protects against more than just water.",
     "DESCRIPTIONS": [
-      "At the start of each turn, get #b",
-      "block for each debuff."
+      "At the end of each turn, get #b",
+      " #bblock for each debuff."
     ]
   }
 }
