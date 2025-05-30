@@ -139,10 +139,9 @@
     "DESCRIPTION":  "At the start of each turn, reduce the cost of a random card to 0 until played.",
     "UPGRADE_DESCRIPTION":  "At the start of each turn, reduce the cost of a random card to 0 for this combat."
   },
-  "${modID}:Symbiotic": {
-    "NAME": "Symbiotic",
-    "DESCRIPTION":  "At the start of your turn, gain !M! block for each debuff.",
-    "UPGRADE_DESCRIPTION":  "At the start of your turn, gain !M! block for each debuff (innate)."
+  "${modID}:Symbiosis": {
+    "NAME": "Symbiosis",
+    "DESCRIPTION":  "The next !M! debuff you gain apply to enemy instead."
   },
   "${modID}:Aerodynamic": {
     "NAME": "Aerodynamic",

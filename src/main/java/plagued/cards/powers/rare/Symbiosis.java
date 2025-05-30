@@ -1,28 +1,29 @@
-package plagued.cards.powers.uncommon;
+package plagued.cards.powers.rare;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
-import plagued.powers.SymbioticPower;
+import plagued.powers.SymbiosisPower;
 import plagued.util.CardStats;
 
-public class Symbiotic extends BaseCard {
-    public static final String ID = makeID("Symbiotic");
-    public static final int BLOCK_PER_DEBUFF = 3;
+public class Symbiosis extends BaseCard {
+    public static final String ID = makeID("Symbiosis");
+    public static final int BLOCK_DEBUFF = 1;
+    public static final int BLOCK_DEBUFF_UPGRADE = 1;
 
     private static final CardStats info = new CardStats(
             ThePlaguedCharacter.Meta.CARD_COLOR,
             CardType.POWER,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             CardTarget.SELF,
-            1
+            2
     );
 
-    public Symbiotic() {
+    public Symbiosis() {
         super(ID, info);
-        this.setMagic(BLOCK_PER_DEBUFF);
+        this.setMagic(BLOCK_DEBUFF, BLOCK_DEBUFF_UPGRADE);
     }
 
     @Override
@@ -31,7 +32,7 @@ public class Symbiotic extends BaseCard {
                 new ApplyPowerAction(
                         p,
                         p,
-                        new SymbioticPower(p, magicNumber)
+                        new SymbiosisPower(p, magicNumber)
                 )
         );
     }

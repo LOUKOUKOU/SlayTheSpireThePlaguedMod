@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
 import plagued.powers.AerodynamicPower;
-import plagued.powers.SymbioticPower;
 import plagued.util.CardStats;
 
 public class Aerodynamic extends BaseCard {

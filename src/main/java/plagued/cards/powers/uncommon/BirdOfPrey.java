@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
 import plagued.powers.BirdOfPreyPower;
-import plagued.powers.SymbioticPower;
 import plagued.util.CardStats;
 
 public class BirdOfPrey extends BaseCard {

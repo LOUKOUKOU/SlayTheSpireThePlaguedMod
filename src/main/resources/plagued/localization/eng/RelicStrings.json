@@ -26,5 +26,13 @@
     "DESCRIPTIONS": [
       "Diseased enemies deal less damage."
     ]
+  },
+  "${modID}:BattleOils": {
+    "NAME": "Battle Oils",
+    "FLAVOR": "Protects against more than just water.",
+    "DESCRIPTIONS": [
+      "At the start of each turn, get #b",
+      "block for each debuff."
+    ]
   }
 }

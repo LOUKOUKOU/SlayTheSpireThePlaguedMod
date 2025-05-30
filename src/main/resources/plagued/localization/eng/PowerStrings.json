@@ -25,11 +25,11 @@
       "At the start of each turn, reduce the cost of a random card to 0 for this combat."
     ]
   },
-  "${modID}:SymbioticPower": {
-    "NAME": "Symbiotic",
+  "${modID}:SymbiosisPower": {
+    "NAME": "Symbiosis",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #bblock for each debuff."
+      "The next #b",
+      " debuff you gain apply to enemy instead."
     ]
   },
   "${modID}:AerodynamicPower": {
@@ -111,7 +111,7 @@
   "${modID}:TakeWingPower": {
     "NAME": "Take Wing",
     "DESCRIPTIONS": [
-      "Receives 50% less attack damage. Cancelled if dealt attack damage #b",
+      "Receives 50% less attack damage. Cancelled if attacked #b",
       " times in one turn."
     ]
   }
