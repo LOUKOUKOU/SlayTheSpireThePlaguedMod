@@ -176,5 +176,10 @@
   "${modID}:TakeWing": {
     "NAME": "Take Wing",
     "DESCRIPTION":  "Gain !M! stacks of flying"
+  },
+  "${modID}:CombatReady": {
+    "NAME": "Combat Ready",
+    "DESCRIPTION":  "At the start if your turn add a random attack to your hand.",
+    "UPGRADED_DESCRIPTION":  "Innate. NL At the start if your turn add a random attack to your hand."
   }
 }

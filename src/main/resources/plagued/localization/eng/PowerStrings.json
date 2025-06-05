@@ -114,5 +114,19 @@
       "Receives 50% less attack damage. Cancelled if attacked #b",
       " times in one turn."
     ]
+  },
+  "${modID}:PaleBloodPower": {
+    "NAME": "Pale Blood",
+    "DESCRIPTIONS": [
+      "Attacks heal damage taken the previous turn."
+    ]
+  },
+  "${modID}:CombatReadyPower": {
+    "NAME": "Combat Ready",
+    "DESCRIPTIONS": [
+      "At the start if your turn add a random attack to your hand.",
+      "At the start if your turn add #b",
+      " random attacks to your hand."
+    ]
   }
 }

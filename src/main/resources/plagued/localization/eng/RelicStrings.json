@@ -34,5 +34,12 @@
       "At the end of each turn, get #b",
       " #bblock for each debuff."
     ]
+  },
+  "${modID}:PaleBlood": {
+    "NAME": "Pale Blood",
+    "FLAVOR": "Transcend the spire.",
+    "DESCRIPTIONS": [
+      "Attacks heal damage taken the previous turn."
+    ]
   }
 }

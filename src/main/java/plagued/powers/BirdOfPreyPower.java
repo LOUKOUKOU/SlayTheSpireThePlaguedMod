@@ -22,7 +22,7 @@ public class BirdOfPreyPower extends BasePower {
     }
 
     public void updateDescription() {
-        if(this.amount > 0)
+        if(this.amount > 1)
             this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         else
             this.description = DESCRIPTIONS[0];
