@@ -180,6 +180,18 @@
   "${modID}:CombatReady": {
     "NAME": "Combat Ready",
     "DESCRIPTION":  "At the start if your turn add a random attack to your hand.",
-    "UPGRADED_DESCRIPTION":  "Innate. NL At the start if your turn add a random attack to your hand."
+    "UPGRADE_DESCRIPTION":  "Innate. NL At the start if your turn add a random attack to your hand."
+  },
+  "${modID}:TaintedBlade": {
+    "NAME": "Tainted Blade",
+    "DESCRIPTION":  "Deal !D! damage and apply equal amount of virus."
+  },
+  "${modID}:Mimicry": {
+    "NAME": "Mimicry",
+    "DESCRIPTION":  "Copy the last attack inflicted to you.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)",
+      " NL (Deals !D! damage !M! times.)"
+    ]
   }
 }

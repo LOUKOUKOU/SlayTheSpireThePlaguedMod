@@ -37,6 +37,8 @@ public class ThePlaguedCharacter extends CustomPlayer {
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
 
+    public int lastAttackReceived = 0;
+
     //Strings
     private static final String ID = makeID("ThePlagued"); //This should match whatever you have in the CharacterStrings.json file
     private static String[] getNames() { return CardCrawlGame.languagePack.getCharacterString(ID).NAMES; }
