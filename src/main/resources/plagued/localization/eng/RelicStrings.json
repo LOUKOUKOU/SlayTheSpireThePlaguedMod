@@ -41,5 +41,15 @@
     "DESCRIPTIONS": [
       "Attacks heal damage taken the previous turn."
     ]
+  },
+  "${modID}:FeatherCrown": {
+    "NAME": "Feather Crown",
+    "FLAVOR": "Said to have been worn by the royalty of the sky. ",
+    "DESCRIPTIONS": [
+      "Killing target applies #b",
+      "weak, #b",
+      "vulnerable and #b",
+      "disease to all other enemies."
+    ]
   }
 }

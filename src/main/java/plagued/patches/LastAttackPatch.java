@@ -60,8 +60,7 @@ public class LastAttackPatch {
         {
             if(__instance.isEndingTurn) {
                 MonsterGroup monsters = AbstractDungeon.getMonsters();
-                for (int i = 0; i < monsters.monsters.size(); i++) {
-                    AbstractMonster monster = monsters.monsters.get(i);
+                for(AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                     DamageLastTakenField.multiAttack.monsterMultiAttack.set(monster, 0);
                 }
             }
