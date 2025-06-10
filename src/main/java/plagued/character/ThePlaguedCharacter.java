@@ -151,7 +151,7 @@ public class ThePlaguedCharacter extends CustomPlayer {
         retVal.add(Defend_Ash.ID);
         retVal.add(Defend_Ash.ID);
         retVal.add(Sweep.ID);
-        retVal.add(Evade.ID);
+        retVal.add(Sweep.ID);
 
         return retVal;
     }

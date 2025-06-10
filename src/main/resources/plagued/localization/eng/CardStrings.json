@@ -122,9 +122,9 @@
     "NAME": "Quarantine",
     "DESCRIPTION":  "Apply !M! random disease to everyone."
   },
-  "${modID}:Redline": {
-    "NAME": "Redline",
-    "DESCRIPTION":  "Gain !B! Block."
+  "${modID}:BCells": {
+    "NAME": "B Cells",
+    "DESCRIPTION":  "Gain !B! Block for each power a target has."
   },
   "${modID}:Defend_Ash": {
     "NAME": "Defend",
