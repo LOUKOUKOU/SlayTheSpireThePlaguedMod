@@ -32,7 +32,7 @@ public class TakeWingPower extends BasePower {
     @Override
     public int onAttacked(DamageInfo info, int damageDealt) {
         int damageAmount = info.output;
-        Boolean willLive = this.calculateDamageTakenAmount((float)damageDealt, info.type) < (float)this.owner.currentHealth;
+        boolean willLive = this.calculateDamageTakenAmount((float)damageDealt, info.type) < (float)this.owner.currentHealth;
         if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && damageAmount > 0 && willLive) {
             this.flash();
             this.addToBot(new ReducePowerAction(this.owner, this.owner, this.ID, 1));

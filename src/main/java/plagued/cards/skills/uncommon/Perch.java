@@ -1,4 +1,4 @@
-package plagued.cards.skills.common;
+package plagued.cards.skills.uncommon;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

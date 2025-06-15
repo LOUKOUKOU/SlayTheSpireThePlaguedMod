@@ -128,5 +128,13 @@
       "At the start if your turn add #b",
       " random attacks to your hand."
     ]
+  },
+  "${modID}:GyroscopicPower": {
+    "NAME": "Gyroscopic",
+    "DESCRIPTIONS": [
+      "The next cards played draws a card.",
+      "The next #b",
+      " cards played draws a card."
+    ]
   }
 }

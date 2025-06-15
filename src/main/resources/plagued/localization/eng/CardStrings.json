@@ -118,9 +118,9 @@
     "NAME": "Mutate",
     "DESCRIPTION":  "Gain !B! Block."
   },
-  "${modID}:Quarantine": {
-    "NAME": "Quarantine",
-    "DESCRIPTION":  "Apply !M! random disease to everyone."
+  "${modID}:Doom": {
+    "NAME": "Doom",
+    "DESCRIPTION":  "Apply !M! random debuffs to everyone."
   },
   "${modID}:BCells": {
     "NAME": "B Cells",
@@ -193,5 +193,17 @@
       " NL (Deals !D! damage.)",
       " NL (Deals !D! damage !M! times.)"
     ]
+  },
+  "${modID}:Gyroscopic": {
+    "NAME": "Gyroscopic",
+    "DESCRIPTION":  "The next !M! cards played draw a card."
+  },
+  "${modID}:Quarantine": {
+    "NAME": "Quarantine",
+    "DESCRIPTION":  "Apply !M! ${modID}:Disease to all enemies. Double all enemies disease."
+  },
+  "${modID}:Crashout": {
+    "NAME": "Crashout",
+    "DESCRIPTION":  "Duplicate all cards in your draw pile."
   }
 }

@@ -65,7 +65,7 @@ public class DuplicateAction extends AbstractGameAction {
                 (cards) -> {
                     for (AbstractCard c : cards) {
                         for (int i = 0; i < copies; i++) {
-                            addToTop(this.duplicate(c));
+                            addToTop(duplicate(c, this.location, this.copies));
                         }
                     }
                 }
@@ -73,18 +73,18 @@ public class DuplicateAction extends AbstractGameAction {
         this.isDone = true;
     }
 
-    public AbstractGameAction duplicate(AbstractCard c) {
+    public static AbstractGameAction duplicate(AbstractCard c, DUPLICATE_LOCATION location, int copies) {
         AbstractCard copy = c.makeStatEquivalentCopy();
-        switch (this.location) {
+        switch (location) {
             case DISCARD:
-                return new MakeTempCardInDiscardAction(copy, this.copies);
+                return new MakeTempCardInDiscardAction(copy, copies);
             case DRAW:
-                return new MakeTempCardInDrawPileAction(copy, this.copies, false, false, true);
+                return new MakeTempCardInDrawPileAction(copy, copies, false, false, true);
             case DRAW_RANDOM:
-                return new MakeTempCardInDrawPileAction(copy, this.copies, true, false, false);
+                return new MakeTempCardInDrawPileAction(copy, copies, true, false, false);
             case HAND:
             default:
-                return new MakeTempCardInHandAction(copy, this.copies);
+                return new MakeTempCardInHandAction(copy, copies);
 
         }
     }
