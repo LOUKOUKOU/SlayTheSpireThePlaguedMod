@@ -27,23 +27,19 @@
   },
   "${modID}:FalconPunch": {
     "NAME": "FalconPunch",
-    "DESCRIPTION":  "Deal 14 damage. Next attack deals extra damage. Also applies !M! weak and !M! vulnerable."
+    "DESCRIPTION":  "Deal 14 damage. Next attack deals !${modID}:raptorDamage! extra damage. Also applies !M! weak and !M! vulnerable."
   },
   "${modID}:Mobbing": {
     "NAME": "Mobbing",
     "DESCRIPTION":  "Deal !D! damage for each attack in your draw pile."
   },
-  "${modID}:Pierce": {
-    "NAME": "Pierce",
-    "DESCRIPTION":  "Deal !D! damage. Draw !M! cards."
+  "${modID}:Peck": {
+    "NAME": "Peck",
+    "DESCRIPTION":  "Deal !D! damage. Block !B!."
   },
   "${modID}:MercyKilling": {
     "NAME": "Mercy Killing",
     "DESCRIPTION":  "Deal !D! damage, draw a card for each target debuff."
-  },
-  "${modID}:Peck": {
-    "NAME": "Peck",
-    "DESCRIPTION":  "Deal !D! damage, gain !B! block."
   },
   "${modID}:BirdStrike": {
     "NAME": "Bird Strike",
@@ -51,7 +47,7 @@
   },
   "${modID}:Scratch": {
     "NAME": "Scratch",
-    "DESCRIPTION":  "Deal !D! damage. Apply !M! ${modID}:Disease."
+    "DESCRIPTION":  "Exhaust. NL Deal !D! damage. Apply !M! ${modID}:Disease."
   },
   "${modID}:Spite": {
     "NAME": "Spite",
@@ -65,13 +61,17 @@
     "NAME": "Death Plunge",
     "DESCRIPTION":  "${modID}:Crippled NL Deal !D! damage. Take !M! damage next turn."
   },
-  "${modID}:WingSlice": {
-    "NAME": "Wing Slice",
-    "DESCRIPTION":  "Deal !D! damage. Gain energy for each enemy hit."
+  "${modID}:Raking": {
+    "NAME": "Raking",
+    "DESCRIPTION":  "Exhaust. NL Deal !D! damage. Gain energy for each enemy hit."
   },
   "${modID}:Stalk": {
     "NAME": "Stalk",
     "DESCRIPTION":  "Deal !D! damage. Draw !M! zero cost attacks."
+  },
+  "${modID}:Lob": {
+    "NAME": "Lob",
+    "DESCRIPTION":  "Exhaust. NL Deal !D! damage."
   },
   "${modID}:TalonStrike": {
     "NAME": "Talon Strike",
@@ -80,6 +80,10 @@
   "${modID}:Strafe": {
     "NAME": "Strafe",
     "DESCRIPTION":  "Deal !${modID}:realDamage! damage. Deal !D! damage to a random enemy."
+  },
+  "${modID}:Assault": {
+    "NAME": "Assault",
+    "DESCRIPTION":  "Deal !D! damage. Duplicate this card X times."
   },
   "${modID}:Evade": {
     "NAME": "Evade",
@@ -96,10 +100,10 @@
   },
   "${modID}:Swoop": {
     "NAME": "Swoop",
-    "DESCRIPTION":  "Gain !M! energy, next turn draw 1 less card."
+    "DESCRIPTION":  "Exhaust. NL Gain !M! energy, next turn draw 1 less card."
   },
-  "${modID}:Perch": {
-    "NAME": "Perch",
+  "${modID}:Spearwall": {
+    "NAME": "Spearwall",
     "DESCRIPTION":  "Draw !M! cards. Gain !B! block for each card that is an attack."
   },
   "${modID}:Skyward": {
@@ -110,9 +114,9 @@
     "NAME": "Flap",
     "DESCRIPTION":  "Apply !M! random debuff to target."
   },
-  "${modID}:Stoic": {
-    "NAME": "Stoic",
-    "DESCRIPTION":  "Apply !M! stack of each buff and debuff."
+  "${modID}:Probiotics": {
+    "NAME": "Probiotics",
+    "DESCRIPTION":  "Increase target buff and debuff by !M!."
   },
   "${modID}:Mutate": {
     "NAME": "Mutate",
@@ -184,7 +188,7 @@
   },
   "${modID}:TaintedBlade": {
     "NAME": "Tainted Blade",
-    "DESCRIPTION":  "Deal !D! damage and apply equal amount of virus."
+    "DESCRIPTION":  "Exhaust. NL Deal !D! damage and apply equal amount of virus."
   },
   "${modID}:Mimicry": {
     "NAME": "Mimicry",
@@ -204,6 +208,11 @@
   },
   "${modID}:Crashout": {
     "NAME": "Crashout",
-    "DESCRIPTION":  "Duplicate all cards in your draw pile."
+    "DESCRIPTION":  "Exhaust. NL Duplicate all cards in your draw pile."
+  },
+  "${modID}:Contagion": {
+    "NAME": "Contagion",
+    "DESCRIPTION":  "Apply all your debuffs to target.",
+    "UPGRADE_DESCRIPTION":  "Apply all your debuffs to all enemies."
   }
 }

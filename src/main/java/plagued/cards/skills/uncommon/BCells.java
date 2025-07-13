@@ -27,10 +27,6 @@ public class BCells extends BaseCard {
         setBlock(BLOCK_PER_POWER, BLOCK_PER_POWER_UPGRADE);
     }
 
-    public void use(AbstractCreature target) {
-
-    }
-
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         AbstractCreature target = SelfOrEnemyTargeting.getTarget(this);

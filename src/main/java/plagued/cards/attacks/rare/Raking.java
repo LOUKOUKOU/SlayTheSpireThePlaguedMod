@@ -1,9 +1,7 @@
 package plagued.cards.attacks.rare;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -11,8 +9,8 @@ import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
 import plagued.util.CardStats;
 
-public class WingSlice extends BaseCard {
-    public static final String ID = makeID("WingSlice");
+public class Raking extends BaseCard {
+    public static final String ID = makeID("Raking");
     private static final CardStats info = new CardStats(
             ThePlaguedCharacter.Meta.CARD_COLOR,
             CardType.ATTACK,
@@ -22,7 +20,7 @@ public class WingSlice extends BaseCard {
     );
     private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 4;
-    public WingSlice() {
+    public Raking() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
         this.exhaust = true;

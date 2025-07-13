@@ -23,7 +23,7 @@ public class LastAttackPatch {
         @SpirePrefixPatch
         public static void Prefix(AbstractPlayer __instance, DamageInfo info)
         {
-            if(info.type == DamageInfo.DamageType.NORMAL) {
+            if(info.type == DamageInfo.DamageType.NORMAL && info.owner != null) {
                 DamageLastTakenField.damageLastTaken.damage.set(__instance, info);
                 DamageLastTakenField.multiAttack.monsterMultiAttack.set(info.owner, DamageLastTakenField.multiAttack.monsterMultiAttack.get(info.owner) + 1);
                 DamageLastTakenField.damageLastTaken.multiAttack.set(__instance, DamageLastTakenField.multiAttack.monsterMultiAttack.get(info.owner));

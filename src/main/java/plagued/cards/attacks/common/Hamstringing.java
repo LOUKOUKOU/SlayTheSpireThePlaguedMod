@@ -1,4 +1,4 @@
-package plagued.cards.attacks.uncommon;
+package plagued.cards.attacks.common;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -15,7 +15,7 @@ public class Hamstringing extends BaseCard {
     private static final CardStats info = new CardStats(
             ThePlaguedCharacter.Meta.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.UNCOMMON,
+            CardRarity.COMMON,
             CardTarget.ENEMY,
             2
     );

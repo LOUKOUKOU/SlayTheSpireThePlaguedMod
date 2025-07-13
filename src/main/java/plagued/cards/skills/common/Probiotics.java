@@ -1,36 +1,38 @@
 package plagued.cards.skills.common;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.evacipated.cardcrawl.mod.stslib.cards.targeting.SelfOrEnemyTargeting;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import plagued.actions.ApplyCrippleAction;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
-import plagued.powers.services.ApplyPowerService;
 import plagued.util.CardStats;
 
-public class Stoic extends BaseCard {
-    public static final String ID = makeID("Stoic");
+public class Probiotics extends BaseCard {
+    public static final String ID = makeID("Probiotics");
     private static final int MAGIC_NUMBER = 1;
     private static final int UPGRADE_MAGIC_NUMBER = 1;
     private static final CardStats info = new CardStats(
             ThePlaguedCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
             CardRarity.COMMON,
-            CardTarget.SELF,
+            SelfOrEnemyTargeting.SELF_OR_ENEMY,
             1
     );
 
-    public Stoic() {
+    public Probiotics() {
         super(ID, info);
         this.setMagic(MAGIC_NUMBER, UPGRADE_MAGIC_NUMBER);
     }
 
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < AbstractDungeon.player.powers.size(); i++) {
-            p.powers.get(i).stackPower(this.magicNumber);
+        AbstractCreature target = SelfOrEnemyTargeting.getTarget(this);
+        if (target == null)
+            target = AbstractDungeon.player;
+        for (int i = 0; i < target.powers.size(); i++) {
+            target.powers.get(i).stackPower(this.magicNumber);
         }
     }
 }

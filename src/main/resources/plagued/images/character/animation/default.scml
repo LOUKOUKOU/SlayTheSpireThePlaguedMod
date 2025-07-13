@@ -31,7 +31,7 @@
                     <bone_ref id="1" parent="0" timeline="7" key="0"/>
                     <bone_ref id="2" parent="0" timeline="8" key="0"/>
                     <bone_ref id="3" parent="0" timeline="9" key="0"/>
-                    <bone_ref id="4" parent="0" timeline="10" key="0"/>
+                    <bone_ref id="4" p*arent="0" timeline="10" key="0"/>
                     <object_ref id="0" timeline="2" key="0" z_index="0"/>
                     <object_ref id="1" timeline="0" key="0" z_index="1"/>
                     <object_ref id="2" parent="3" timeline="1" key="0" z_index="2"/>

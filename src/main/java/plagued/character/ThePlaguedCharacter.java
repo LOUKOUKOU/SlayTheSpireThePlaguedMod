@@ -122,7 +122,7 @@ public class ThePlaguedCharacter extends CustomPlayer {
     public ThePlaguedCharacter() {
         super(getNames()[0], Meta.THE_PLAGUED,
                 new CustomEnergyOrb(orbTextures, characterPath("energyorb/vfx.png"), layerSpeeds), //Energy Orb
-                new SpriterAnimation(characterPath("animation/default.scml"))); //Animation
+                new SpriterAnimation(characterPath("animation/ThePlaguedCharacterAnimation.scml"))); //Animation
 
         initializeClass(null,
                 SHOULDER_2,

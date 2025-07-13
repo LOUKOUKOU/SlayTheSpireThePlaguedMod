@@ -28,20 +28,19 @@ public class ApplyGeneralPowerAction extends AbstractGameAction {
     }
 
     public enum BUFF_TYPE {
-//        CORPSE_EXPLOSION,
-        STRENGTH,
-        ARTIFACT,
-        BARRICADE,
-        BUFFER,
         INTANGIBLE,
+        MANTRA,
         METALLICIZE,
+        NEXT_TURN_BLOCK,
         PLATED_ARMOR,
         REGENERATE,
         RITUAL,
+        STRENGTH,
         THORNS,
         VIGOR,
-        ANGRY,
-        MALLEABLE,
+        ARTIFACT,
+        BARRICADE,
+        BUFFER
     }
 
     public ApplyGeneralPowerAction(AbstractPlayer player) {
@@ -67,6 +66,29 @@ public class ApplyGeneralPowerAction extends AbstractGameAction {
     }
 
     private static AbstractPower getDebuff(DEBUFF_TYPE type, AbstractCreature owner, AbstractPlayer player, int amount) {
+        switch (type) {
+            case WEAK:
+                return new WeakPower(owner, amount, false);
+            case VULNERABLE:
+                return new VulnerablePower(owner, amount, false);
+            case LOOSE_STR:
+                return new StrengthPower(owner, -amount);
+            case POISON:
+                return new PoisonPower(owner, player, amount);
+            case SLOW:
+                return new SlowPower(owner, amount);
+            case CHOKE:
+                return new ChokePower(owner, amount);
+            case CONSTRICTED:
+                return new ConstrictedPower(owner, player, amount);
+            case DISEASE:
+                return new DiseasePower(owner, amount);
+            default:
+                return new DudPower(owner);
+        }
+    }
+
+    private static AbstractPower getBuff(DEBUFF_TYPE type, AbstractCreature owner, AbstractPlayer player, int amount) {
         switch (type) {
             case WEAK:
                 return new WeakPower(owner, amount, false);

@@ -1,10 +1,9 @@
-package plagued.cards.skills.common;
+package plagued.cards.skills.Parked;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import plagued.actions.ApplyCrippleAction;
-import plagued.actions.DrawPileToHandAction;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
 import plagued.powers.services.ApplyPowerService;
@@ -19,7 +18,7 @@ public class Skyward extends BaseCard {
     private static final CardStats info = new CardStats(
             ThePlaguedCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
-            CardRarity.COMMON,
+            CardRarity.SPECIAL, //            CardRarity.COMMON,
             CardTarget.SELF,
             1
     );

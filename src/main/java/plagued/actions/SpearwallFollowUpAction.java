@@ -8,10 +8,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class PerchFollowUpAction extends AbstractGameAction {
+public class SpearwallFollowUpAction extends AbstractGameAction {
     private final int amount;
     private final AbstractPlayer player;
-    public PerchFollowUpAction(int amount, AbstractPlayer player) {
+    public SpearwallFollowUpAction(int amount, AbstractPlayer player) {
         this.duration = 0.001F;
         this.amount = amount;
         this.player = player;
@@ -22,10 +22,8 @@ public class PerchFollowUpAction extends AbstractGameAction {
         this.tickDuration();
         if (this.isDone) {
             for(AbstractCard c : DrawCardAction.drawnCards) {
-                if (c.costForTurn != 0 && !c.freeToPlayOnce) {
-                    if(c.type == AbstractCard.CardType.ATTACK) {
-                        this.addToBot(new GainBlockAction(this.player, this.player, this.amount));
-                    }
+                if(c.type == AbstractCard.CardType.ATTACK) {
+                    this.addToBot(new GainBlockAction(this.player, this.player, this.amount));
                 }
             }
         }

@@ -2,12 +2,10 @@ package plagued.cards.attacks.common;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
 import plagued.util.CardStats;
@@ -23,8 +21,8 @@ public class Peck extends BaseCard {
     );
     private static final int DAMAGE = 3;
     private static final int UPG_DAMAGE = 3;
-    private static final int BLOCK = 2;
-    private static final int BLOCK_DAMAGE = 2;
+    private static final int BLOCK = 3;
+    private static final int BLOCK_DAMAGE = 3;
 
     public Peck() {
         super(ID, info);

@@ -1,4 +1,4 @@
-package plagued.cards.skills.common;
+package plagued.cards.skills.Parked;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,7 +14,7 @@ public class Flap extends BaseCard {
     private static final CardStats info = new CardStats(
             ThePlaguedCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
-            CardRarity.COMMON,
+            CardRarity.SPECIAL,
             CardTarget.ENEMY,
             1
     );

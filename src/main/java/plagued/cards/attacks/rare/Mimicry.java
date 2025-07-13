@@ -36,7 +36,6 @@ public class Mimicry extends BaseCard {
 
     public Mimicry() {
         super(ID, info);
-        this.exhaust = true;
         this.setCostUpgrade(1);
         setDamage(DAMAGE);
         setMagic(0);
