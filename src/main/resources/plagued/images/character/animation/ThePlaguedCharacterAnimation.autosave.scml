@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
+    <folder id="0">
+        <file id="0" name="Sprite_1.png" width="612" height="556" pivot_x="0" pivot_y="1"/>
+        <file id="1" name="Sprite_2.png" width="612" height="556" pivot_x="0" pivot_y="1"/>
+        <file id="2" name="Sprite_3.png" width="612" height="556" pivot_x="0" pivot_y="1"/>
+        <file id="3" name="Sprite_4.png" width="612" height="556" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <entity id="0" name="main">
+        <animation id="0" name="character_animation" length="1000" interval="200">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="3" key="0" z_index="0"/>
+                </key>
+                <key id="1" time="250">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                </key>
+                <key id="2" time="499">
+                    <object_ref id="0" timeline="1" key="0" z_index="0"/>
+                </key>
+                <key id="3" time="748">
+                    <object_ref id="0" timeline="2" key="0" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="Sprite_2">
+                <key id="0" time="250" spin="0">
+                    <object folder="0" file="1" x="-254" y="254" angle="0" scale_x="0.77146" scale_y="0.82549"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="Sprite_3">
+                <key id="0" time="499" spin="0">
+                    <object folder="0" file="2" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="2" name="Sprite_4">
+                <key id="0" time="748" spin="0">
+                    <object folder="0" file="3" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="3" name="Sprite_1_000">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="-254" y="254" angle="0" scale_x="0.771457" scale_y="0.82549"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>
