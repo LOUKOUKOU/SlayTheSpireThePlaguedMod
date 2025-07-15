@@ -3,7 +3,10 @@ package plagued.powers.services;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
+import plagued.actions.ApplyGeneralPowerAction;
 import plagued.powers.DudPower;
+
+import java.util.Random;
 
 public class ApplyPowerService {
     public enum POWER_TYPE {
@@ -57,6 +60,11 @@ public class ApplyPowerService {
             default:
                 return AbstractPower.PowerType.DEBUFF;
         }
+    }
+
+    static public POWER_TYPE getRandomDebuffType() {
+        int pick = new Random().nextInt(POWER_TYPE.values().length);
+        return POWER_TYPE.values()[pick];
     }
 
     public static String getDescription(POWER_TYPE type, int amount) {

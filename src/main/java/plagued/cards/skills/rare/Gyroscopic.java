@@ -29,14 +29,12 @@ public class Gyroscopic extends BaseCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            this.addToBot(
-                new ApplyPowerAction(
-                    p,
-                    p,
-                    new GyroscopicPower(p, this.magicNumber)
-                )
-            );
-        }
+        this.addToBot(
+            new ApplyPowerAction(
+                p,
+                p,
+                new GyroscopicPower(p, this.magicNumber)
+            )
+        );
     }
 }

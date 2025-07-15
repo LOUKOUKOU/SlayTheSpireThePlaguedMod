@@ -81,8 +81,8 @@
     "NAME": "Strafe",
     "DESCRIPTION":  "Deal !${modID}:realDamage! damage. Deal !D! damage to a random enemy."
   },
-  "${modID}:Assault": {
-    "NAME": "Assault",
+  "${modID}:Crashout": {
+    "NAME": "Crashout",
     "DESCRIPTION":  "Deal !D! damage. Duplicate this card X times."
   },
   "${modID}:Evade": {
@@ -104,7 +104,7 @@
   },
   "${modID}:Spearwall": {
     "NAME": "Spearwall",
-    "DESCRIPTION":  "Draw !M! cards. Gain !B! block for each card that is an attack."
+    "DESCRIPTION":  "Draw !M! cards. Gain !B! block for each attack card drawn."
   },
   "${modID}:Skyward": {
     "NAME": "Skyward",
@@ -118,7 +118,11 @@
     "NAME": "Probiotics",
     "DESCRIPTION":  "Increase target buff and debuff by !M!."
   },
-  "${modID}:Mutate": {
+  "${modID}:IronWingTechnique": {
+    "NAME": "IronWingTechnique",
+    "DESCRIPTION":  "Gain !B! Block. Next turn gain !M! random debuffs."
+  },
+  "{modID}:Mutate": {
     "NAME": "Mutate",
     "DESCRIPTION":  "Gain !B! Block."
   },
@@ -206,8 +210,8 @@
     "NAME": "Quarantine",
     "DESCRIPTION":  "Apply !M! ${modID}:Disease to all enemies. Double all enemies disease."
   },
-  "${modID}:Crashout": {
-    "NAME": "Crashout",
+  "${modID}:FreeAsABird": {
+    "NAME": "FreeAsABird",
     "DESCRIPTION":  "Exhaust. NL Duplicate all cards in your draw pile."
   },
   "${modID}:Contagion": {

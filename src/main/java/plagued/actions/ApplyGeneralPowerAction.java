@@ -111,7 +111,7 @@ public class ApplyGeneralPowerAction extends AbstractGameAction {
         }
     }
 
-    private DEBUFF_TYPE getRandomDebuffType() {
+    static public DEBUFF_TYPE getRandomDebuffType() {
         int pick = new Random().nextInt(DEBUFF_TYPE.values().length);
         return DEBUFF_TYPE.values()[pick];
     }

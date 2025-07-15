@@ -1,19 +1,16 @@
 package plagued.cards.skills.rare;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import plagued.actions.DuplicateAction;
 import plagued.cards.BaseCard;
 import plagued.character.ThePlaguedCharacter;
-import plagued.powers.DiseasePower;
 import plagued.util.CardStats;
 
-public class Crashout extends BaseCard {
-    public static final String ID = makeID("Crashout");
+public class FreeAsABird extends BaseCard {
+    public static final String ID = makeID("FreeAsABird");
 
     private static final CardStats info = new CardStats(
         ThePlaguedCharacter.Meta.CARD_COLOR,
@@ -23,7 +20,7 @@ public class Crashout extends BaseCard {
         2
     );
 
-    public Crashout() {
+    public FreeAsABird() {
         super(ID, info);
         this.exhaust = true;
         this.setCostUpgrade(1);
