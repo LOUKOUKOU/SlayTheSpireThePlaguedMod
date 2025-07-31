@@ -26,6 +26,7 @@ public class Contagion extends BaseCard {
 
     public Contagion() {
         super(ID, info);
+        this.exhaust = true;
     }
 
     @Override

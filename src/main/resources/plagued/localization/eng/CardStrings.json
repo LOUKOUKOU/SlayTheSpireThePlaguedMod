@@ -120,7 +120,7 @@
   },
   "${modID}:IronWingTechnique": {
     "NAME": "IronWingTechnique",
-    "DESCRIPTION":  "Gain !B! Block. Next turn gain !M! random debuffs."
+    "DESCRIPTION":  "${modID}:Cripple. NL Gain !B! Block. Next turn gain !M! random debuffs."
   },
   "{modID}:Mutate": {
     "NAME": "Mutate",
@@ -216,7 +216,7 @@
   },
   "${modID}:Contagion": {
     "NAME": "Contagion",
-    "DESCRIPTION":  "Apply all your debuffs to target.",
-    "UPGRADE_DESCRIPTION":  "Apply all your debuffs to all enemies."
+    "DESCRIPTION":  "Exhaust. Apply all your debuffs to target.",
+    "UPGRADE_DESCRIPTION":  "Exhaust. Apply all your debuffs to all enemies."
   }
 }

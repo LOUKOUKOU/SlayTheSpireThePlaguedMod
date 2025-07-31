@@ -33,6 +33,6 @@ public class IronWingTechnique extends BaseCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, p, this.block));
-        this.addToBot(new ApplyCrippleAction(ApplyPowerService.getRandomDebuffType(), p, "PTSD", this.magicNumber));
+        this.addToBot(new ApplyCrippleAction(ApplyPowerService.getRandomDebuffType(), p, "PTSD", " get 2 random debuffs.", this.magicNumber));
     }
 }

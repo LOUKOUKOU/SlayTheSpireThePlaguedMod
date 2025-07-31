@@ -26,8 +26,19 @@ public class CrippledPower extends BasePower implements NonStackablePower {
         this.updateDescription(powerApplied, amount);
     }
 
+    public CrippledPower(AbstractCreature owner, String name, String description, ApplyPowerService.POWER_TYPE powerApplied, int amount) {
+        super(POWER_ID, ApplyPowerService.getPowerType(powerApplied), TURN_BASED, owner, amount);
+        this.name = name;
+        this.powerApplied = powerApplied;
+        this.updateDescription(description);
+    }
+
     public void updateDescription(ApplyPowerService.POWER_TYPE powerApplied, int amount) {
         this.description = DESCRIPTIONS[0] + ApplyPowerService.getDescription(powerApplied, amount);
+    }
+
+    public void updateDescription(String description) {
+        this.description = DESCRIPTIONS[0] + description;
     }
 
     public static AbstractGameAction getPower(ApplyPowerService.POWER_TYPE powerApplied, AbstractCreature owner, int amount) {

@@ -42,8 +42,8 @@
   "${modID}:DiseasePower": {
     "NAME": "Disease",
     "DESCRIPTIONS": [
-      "Receive #b",
-      "% more damage from #yAttacks.",
+      "Gain #b",
+      "% debuffs at the start of turn.",
       " #yAttacks deal #b",
       "% less damage.",
       " Increases each turn."

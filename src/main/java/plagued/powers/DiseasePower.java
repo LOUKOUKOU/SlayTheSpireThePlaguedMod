@@ -5,7 +5,9 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import plagued.actions.ApplyGeneralPowerAction;
 import plagued.powers.services.ApplyPowerService;
 import plagued.relics.rare.HemlockMoth;
 
@@ -55,15 +57,17 @@ public class DiseasePower extends BasePower {
         }
     }
 
-    public void atEndOfRound() {
-        this.addToBot(new ApplyPowerAction(this.owner, this.owner, this, 1));
+    @Override
+    public void atStartOfTurn() {
+        super.atStartOfTurn();
+
+        if (!this.owner.isPlayer) {
+            this.addToBot(new ApplyGeneralPowerAction(AbstractDungeon.player, (AbstractMonster) this.owner, this.amount));
+        }
     }
 
-    public float atDamageReceive(float damage, DamageInfo.DamageType type) {
-        if (type == DamageInfo.DamageType.NORMAL && !this.owner.isPlayer) {
-            return damage * (1 + this.getVuln(this.amount));
-        }
-        return damage;
+    public void atEndOfRound() {
+        this.addToBot(new ApplyPowerAction(this.owner, this.owner, this, 1));
     }
 
     public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {

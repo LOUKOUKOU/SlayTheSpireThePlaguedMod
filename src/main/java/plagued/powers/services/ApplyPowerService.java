@@ -63,7 +63,7 @@ public class ApplyPowerService {
     }
 
     static public POWER_TYPE getRandomDebuffType() {
-        int pick = new Random().nextInt(POWER_TYPE.values().length);
+        int pick = new Random().nextInt(POWER_TYPE.values().length - 1);
         return POWER_TYPE.values()[pick];
     }
 
